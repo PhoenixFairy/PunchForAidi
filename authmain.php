@@ -55,10 +55,24 @@ if (isset($_SESSION[ 'vaild_user'])){
         // User has not tried to login in yet or has log out.
         echo 'You have not logged in.';
     }
+    
+    // Provide form to log in.
+    
+    echo '<form action="authmain.php" method="post">';
+    echo '<table>';
+    echo '<tr><td>Userid:></td>';
+    echo '<td><input type="text" name="userid"></td></tr>';
+    echo '<tr><td>Password:</td>';
+    echo '<td><input type="password" name="password"></td></tr>';
+    echo '<tr><td colspan="2" align="center">';
+    echo '<input type="submit" value="Log in"></td></tr>';
+    echo '</table>';
+    echo '</form>';
 }
 
 
 ?>
+<br />
 </body>
 
 </html>
